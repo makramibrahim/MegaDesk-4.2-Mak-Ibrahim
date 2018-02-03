@@ -18,6 +18,8 @@ namespace MegaDesk_1_Makram_Ibrahim
         private string pClientName;
         private int pRushDays;
 
+        private Desk desk = new Desk();
+
         // Fixed values that are not allowed to change
         private const double BASESIZE = 1000;
         private const double SURFACE = 1;

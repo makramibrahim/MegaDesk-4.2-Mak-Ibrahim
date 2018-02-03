@@ -47,26 +47,31 @@ namespace MegaDesk_1_Makram_Ibrahim
         {
             string material = DeskMaterial.Text;
 
-            if (material == "Oak")
-            {
-                matPrice = 200;
-            }
-            else if (material == "Lanimate")
-            {
-                matPrice = 100;
-            }
-            else if (material == "Pine")
-            {
-                matPrice = 50;
-            }
-            else if (material == "Rosewood")
-            {
-                matPrice = 300;
-            }
-            else if (material == "Veneer")
-            {
-                matPrice = 125;
-            }
+            DeskSurface Dsurface = new DeskSurface();
+           
+
+            if (material == Dsurface.)
+
+
+            //{
+            //    matPrice = 200;
+            //}
+            //else if (material == "Lanimate")
+            //{
+            //    matPrice = 100;
+            //}
+            //else if (material == "Pine")
+            //{
+            //    matPrice = 50;
+            //}
+            //else if (material == "Rosewood")
+            //{
+            //    matPrice = 300;
+            //}
+            //else if (material == "Veneer")
+            //{
+            //    matPrice = 125;
+            //}
 
             return matPrice;
 

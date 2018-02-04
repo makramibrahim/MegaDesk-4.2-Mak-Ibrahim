@@ -15,6 +15,9 @@ namespace MegaDesk_1_Makram_Ibrahim
         public ViewQuotes()
         {
             InitializeComponent();
+            AddNewQuote addNewQuote = new AddNewQuote();
+
+            addNewQuote.DisplayClientData();
         }
 
         private void MenuBtn_Click(object sender, EventArgs e)

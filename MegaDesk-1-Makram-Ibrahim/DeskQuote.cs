@@ -9,68 +9,66 @@ namespace MegaDesk_1_Makram_Ibrahim
     class DeskQuote
     {
         /**************************
-         * Declare some variables 
-         *************************/
-        private double pWidth;
-        private double pDepth;
-        private int pNumOfDrawers;
-        private string pMaterial;
-        private string pClientName;
-        private int pRushDays;
-
+        * Declare some variables 
+        *************************/
+        public string ClientName    { get; set;  }
+        public int RushDays         { get; set;  }
+        public int GetQuote         { get; set;  }
         private Desk desk = new Desk();
 
-        // Fixed values that are not allowed to change
-        private const double BASESIZE = 1000;
-        private const double SURFACE = 1;
+        private double Surface = 0;
+
+        //Priced items with fiexed values
+        private const double BASE_SIZE = 1000;
+        private const double BASE_PRICE = 200; // Base Desk Price
+        private const double DRAWER_PRICE = 50; // per drawer
+        private const double SURFACE_PER_INCH = 1; // Desktop Surface Area > 1000 in2
+        private const int RUSH_DAY1 = 3;
+        private const int RUSH_DAY2 = 5;
+        private const int RUSH_DAY3 = 7;
+        private const int RUSH_HOLD = 2000;
+
 
         /******************************
          * Overloaded Constructor
          * ***************************/
         public DeskQuote(string clientName, double width, double depth, int numOfDrawers, string material, int rushDays)
         {
-            pClientName = clientName;
-            pWidth = width;
-            pDepth = depth;
-            pNumOfDrawers = numOfDrawers;
-            pMaterial = material;
-            pRushDays = rushDays;
+            ClientName = clientName;
+            desk.Width = width;
+            desk.Depth = depth;
+            desk.NumOfDrawers = numOfDrawers;
+            desk.DeskMaterials = material;
+            RushDays = rushDays;
+
+            Surface = desk.Width * desk.Depth;
         }
 
         /*******************************
          * Defalut Constructor
          * ***************************/
-        public DeskQuote()
-        {
-            pWidth = 0.0;
-            pDepth = 0.0;
-            pNumOfDrawers = 0;
-            pMaterial = "";
-            pRushDays = 0;
-        }
+        public DeskQuote() {}
 
         /***************************************
          * Accessor methods 
          * ************************************/
-        public string clientName { get; set; }
-        public DateTime quoteDate { get; set; }
-
-        public DateTime geDate()
+        public string geDate()
         {
-            quoteDate = DateTime.Now;
-            quoteDate.ToShortDateString();
+            DateTime d = DateTime.Now;
 
-            return quoteDate;
+            string date = d.Month.ToString() + d.Date.ToString() + d.Year.ToString();
+
+            return date;
         }
 
         /************************************
          * Display the desk surface area
          * **********************************/
-        public double getSurfaceArea()
+        public double SurfaceArea()
         {
-            if (pWidth * pDepth > BASESIZE)
+            if (desk.Width * desk.Depth > BASE_SIZE)
             {
-                return (pWidth * pDepth - BASESIZE) * SURFACE;
+                return (desk.Width * desk.Depth - BASE_SIZE) * SURFACE_PER_INCH;
             } 
             else
             {
@@ -81,7 +79,20 @@ namespace MegaDesk_1_Makram_Ibrahim
         /************************************
         * Get Prices 
         ***********************************/
+        public double QuoteTotal()
+        {
+            return BASE_PRICE + SurfaceArea() + DrawerCost() + int.Parse(desk.DeskMaterials) + RushOrderCost(); 
+        }
 
+        public double DrawerCost()
+        {
+            return (desk.NumOfDrawers * DRAWER_PRICE); 
+        }
+
+        public int RushOrderCost()
+        {
+            return 0;
+        }
 
 
 

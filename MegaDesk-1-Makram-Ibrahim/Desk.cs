@@ -8,17 +8,20 @@ namespace MegaDesk_1_Makram_Ibrahim
 {
     class Desk
     {
-        public double width           { get; set; }
-        public double depth           { get; set; }
-        public int numOfDrawers       { get; set; }
-        public string deskMaterials   { get; set; }
+        public double Width           { get; set; }
+        public double Depth           { get; set; }
+        public int NumOfDrawers       { get; set; }
+        public string DeskMaterials   { get; set; }
  
     }
 
-    enum DeskSurface
+    /**************************
+     * Set our own data type 
+     ************************/
+   public enum DeskSurface
     {
         Oak = 200,
-        Lanimate = 100,
+        Laminate = 100,
         Pine = 50,
         Rosewood = 300,
         Veneer = 125

@@ -17,16 +17,20 @@ namespace MegaDesk_1_Makram_Ibrahim
 
         double matPrice = 0;
 
+        /************************************
+        * Onload Form, display the following methods
+        * ************************************/
         public AddNewQuote()
         {
             InitializeComponent();
 
             DeskQuote getTime = new DeskQuote();
-            OrderDate.Text = Convert.ToString(getTime.geDate());
-
-            
+            OrderDate.Text = getTime.geDate();
         }
- 
+
+        /**************************************************
+        * Show Menu page from add new quote 
+        * *************************************************/
         private void MenuBtn_Click(object sender, EventArgs e)
         {
             var mainMenu = (MainMenu)Tag;
@@ -36,47 +40,60 @@ namespace MegaDesk_1_Makram_Ibrahim
             Close();
         }
 
-      
-
+       /*************************************************
+       *  Order confirmation
+       * **********************************************/
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
-            DisplayClientData();
+            //DisplayClientData();
+            ViewQuotes viewQuotes = new ViewQuotes();
+
+            viewQuotes.Tag = this;
+
+            viewQuotes.Show(this);
+
+            Close();
         }
 
+
+        /*************************************
+        * Price list for desk materials
+        * ***********************************/
         public double PriceList()
         {
             string material = DeskMaterial.Text;
 
-            DeskSurface Dsurface = new DeskSurface();
-           
+            //DeskSurface ds = new DeskSurface();
 
-            if (material == Dsurface.)
+            if (material == "Oak")
 
-
-            //{
-            //    matPrice = 200;
-            //}
-            //else if (material == "Lanimate")
-            //{
-            //    matPrice = 100;
-            //}
-            //else if (material == "Pine")
-            //{
-            //    matPrice = 50;
-            //}
-            //else if (material == "Rosewood")
-            //{
-            //    matPrice = 300;
-            //}
-            //else if (material == "Veneer")
-            //{
-            //    matPrice = 125;
-            //}
+            {
+                matPrice = 200;
+            }
+            else if (material == "Laminate")
+            {
+                matPrice = 100;
+            }
+            else if (material == "Pine")
+            {
+                matPrice = 50;
+            }
+            else if (material == "Rosewood")
+            {
+                matPrice = 300;
+            }
+            else if (material == "Veneer")
+            {
+                matPrice = 125;
+            }
 
             return matPrice;
 
         }
 
+        /*************************************
+        *  Display order details
+        * ***********************************/
         public void DisplayClientData()
         {
             string clientName = ClientName.Text;
@@ -99,15 +116,15 @@ namespace MegaDesk_1_Makram_Ibrahim
                                 "Desk Drawers: " + numOfDrawers + Environment.NewLine +
                                 "Desk Material: " + material + Environment.NewLine +
                                 "Rush Days: " + rushDays + Environment.NewLine +
-                                "Desk Suraface" + clientOrder.getSurfaceArea().ToString();
-
-
+                                "Desk Suraface " + clientOrder.SurfaceArea().ToString();
 
             TotalPrice.Text = "$" + getPriceList.ToString();
 
-
         }
 
+        /*************************************
+        * Cancel Order event.
+        * ***********************************/
         private void CancleBtn_Click(object sender, EventArgs e)
         {
             ClientName.Text = "";
@@ -119,6 +136,16 @@ namespace MegaDesk_1_Makram_Ibrahim
             DisplayQuote.Text = "";
 
             TotalPrice.Text = "";
+        }
+
+        private void DeskWidth_KeyPress(object sender, KeyPressEventArgs e)
+        {
+
+        }
+
+        private void DeskDepth_TextChanged(object sender, EventArgs e)
+        {
+
         }
     }
 }

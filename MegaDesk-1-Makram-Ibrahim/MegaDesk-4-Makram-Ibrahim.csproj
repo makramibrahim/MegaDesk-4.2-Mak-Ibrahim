@@ -52,6 +52,12 @@
       <DependentUpon>AddNewQuote.cs</DependentUpon>
     </Compile>
     <Compile Include="Desk.cs" />
+    <Compile Include="DisplayQuotes.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DisplayQuotes.Designer.cs">
+      <DependentUpon>DisplayQuotes.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainMenu.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -75,6 +81,9 @@
     </Compile>
     <EmbeddedResource Include="AddNewQuote.resx">
       <DependentUpon>AddNewQuote.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DisplayQuotes.resx">
+      <DependentUpon>DisplayQuotes.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="MainMenu.resx">
       <DependentUpon>MainMenu.cs</DependentUpon>

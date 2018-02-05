@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-namespace MegaDesk_1_Makram_Ibrahim.Properties
+namespace MegaDesk_4_Makram_Ibrahim.Properties
 {
 
 

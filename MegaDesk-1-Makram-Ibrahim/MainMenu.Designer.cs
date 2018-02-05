@@ -1,4 +1,4 @@
-﻿namespace MegaDesk_1_Makram_Ibrahim
+﻿namespace MegaDesk_4_Makram_Ibrahim
 {
     partial class MainMenu
     {

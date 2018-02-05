@@ -8,14 +8,14 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MegaDesk_1_Makram_Ibrahim
+namespace MegaDesk_4_Makram_Ibrahim
 {
     public partial class AddNewQuote : Form
     {
+        DeskQuote deskQuote = new DeskQuote();
+
         private void AddNewQuote_Load(object sender, EventArgs e){}
         private void Material_SelectedIndexChanged(object sender, EventArgs e){ }
-
-        double matPrice = 0;
 
         /************************************
         * Onload Form, display the following methods
@@ -45,56 +45,23 @@ namespace MegaDesk_1_Makram_Ibrahim
        * **********************************************/
         private void ConfirmBtn_Click(object sender, EventArgs e)
         {
-            //DisplayClientData();
-            ViewQuotes viewQuotes = new ViewQuotes();
 
-            viewQuotes.Tag = this;
+            //DisplayQuotes displayQuotes = new DisplayQuotes();
 
-            viewQuotes.Show(this);
+            //displayQuotes.Tag = this;
 
-            Close();
-        }
+            //displayQuotes.Show(this);
 
+            //Hide();
 
-        /*************************************
-        * Price list for desk materials
-        * ***********************************/
-        public double PriceList()
-        {
-            string material = DeskMaterial.Text;
+            DisplayClientData();
 
-            //DeskSurface ds = new DeskSurface();
-
-            if (material == "Oak")
-
-            {
-                matPrice = 200;
-            }
-            else if (material == "Laminate")
-            {
-                matPrice = 100;
-            }
-            else if (material == "Pine")
-            {
-                matPrice = 50;
-            }
-            else if (material == "Rosewood")
-            {
-                matPrice = 300;
-            }
-            else if (material == "Veneer")
-            {
-                matPrice = 125;
-            }
-
-            return matPrice;
 
         }
-
         /*************************************
         *  Display order details
         * ***********************************/
-        public void DisplayClientData()
+        public string DisplayClientData()
         {
             string clientName = ClientName.Text;
             double width = Convert.ToDouble(DeskWidth.Text);
@@ -103,13 +70,11 @@ namespace MegaDesk_1_Makram_Ibrahim
             string material = DeskMaterial.Text;
             int rushDays = Convert.ToInt32(RushDays.Text);
 
-            double getPriceList = PriceList();
 
-           
 
             DeskQuote clientOrder = new DeskQuote(clientName, width, depth, numOfDrawers, material, rushDays);
 
-
+          
             DisplayQuote.Text = "Customer Name: " + clientName + Environment.NewLine +
                                 "Desk Width: " + width + Environment.NewLine +
                                 "Desk Depth: " + depth + Environment.NewLine +
@@ -118,7 +83,9 @@ namespace MegaDesk_1_Makram_Ibrahim
                                 "Rush Days: " + rushDays + Environment.NewLine +
                                 "Desk Suraface " + clientOrder.SurfaceArea().ToString();
 
-            TotalPrice.Text = "$" + getPriceList.ToString();
+            double getPriceList = deskQuote.QuoteTotal();
+
+            return TotalPrice.Text = "$" + getPriceList.ToString();
 
         }
 

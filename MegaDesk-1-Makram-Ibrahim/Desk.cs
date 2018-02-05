@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace MegaDesk_1_Makram_Ibrahim
+namespace MegaDesk_4_Makram_Ibrahim
 {
     class Desk
     {
@@ -12,10 +12,10 @@ namespace MegaDesk_1_Makram_Ibrahim
         public double Depth           { get; set; }
         public int NumOfDrawers       { get; set; }
         public string DeskMaterials   { get; set; }
- 
     }
 
-    /**************************
+
+     /***********************
      * Set our own data type 
      ************************/
    public enum DeskSurface

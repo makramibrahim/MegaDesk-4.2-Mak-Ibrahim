@@ -10,22 +10,24 @@ using System.Windows.Forms;
 
 namespace MegaDesk_4_Makram_Ibrahim
 {
-    public partial class ViewQuotes : Form
+    public partial class DisplayQuotes : Form
     {
-        public ViewQuotes()
+        public DisplayQuotes()
         {
             InitializeComponent();
 
+            DeskQuote deskQuote = new DeskQuote();
+
+            DisplayQuoteList.Text = "Hello There!";
         }
 
-        private void MenuBtn_Click(object sender, EventArgs e)
+        private void button1_Click(object sender, EventArgs e)
         {
-            var mainMenu = (MainMenu)Tag;
 
-            mainMenu.Show();
-
-            Close();
-
+            var addnewQuotes = (AddNewQuote)Tag;
+            addnewQuotes.Show();
+            Hide();
         }
+
     }
 }

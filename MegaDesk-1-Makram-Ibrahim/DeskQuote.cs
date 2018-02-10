@@ -8,137 +8,93 @@ namespace MegaDesk_4_Makram_Ibrahim
 {
     class DeskQuote
     {
-        /**************************
+        /*************************
         * Declare some variables 
         *************************/
-        public string ClientName    { get; set;  }
-        public int RushDays         { get; set;  }
-        public int GetQuote         { get; set;  }
+        public String ClientName { get; set; }
+        public DateTime QuoteDate { get; set; }
+        public int RushDays { get; set; }
+        public Desk Desk = new Desk();
+        public decimal QuotePrice { get; set; }
 
-        private Desk desk = new Desk();
 
-    
-        private double Surface = 0;
-        private double matPrice = 0;
+        private decimal Surface = 0;
+
 
         //Priced items with fiexed values
-        private const double BASE_SIZE = 1000;
-        private const double BASE_PRICE = 200; // Base Desk Price
-        private const double DRAWER_PRICE = 50; // per drawer
-        private const double SURFACE_PER_INCH = 1; // Desktop Surface Area > 1000 in2
-        private const int RUSH_DAY1 = 3;
-        private const int RUSH_DAY2 = 5;
-        private const int RUSH_DAY3 = 7;
+        private const int BASE_PRICE = 200;
+        private const int BASE_SIZE = 1000;
+        private const int DRAWER_PRICE = 50;
+        private const int PRICE_PER_INCH = 1;
+        private const int RUSH_DAYS1 = 3;
+        private const int RUSH_DAYS2 = 5;
+        private const int RUSH_DAYS3 = 7;
         private const int RUSH_HOLD = 2000;
 
-
         /******************************
-         * Overloaded Constructor
-         * ***************************/
-        public DeskQuote(string clientName, double width, double depth, int numOfDrawers, string material, int rushDays)
+        * Overloaded Constructor
+        * ***************************/
+        public DeskQuote(string name, DateTime quoteDate, decimal width, decimal depth,
+            int drawers, SurfaceMaterials material, int rushDays)
         {
-            ClientName = clientName;
-            desk.Width = width;
-            desk.Depth = depth;
-            desk.NumOfDrawers = numOfDrawers;
-            desk.DeskMaterials = material;
+            ClientName = name;
+            QuoteDate = quoteDate;
+            Desk.Width = width;
+            Desk.Depth = depth;
+            Desk.surfMaterials = material;
+            Desk.NumOfDrawers = drawers;
             RushDays = rushDays;
+
+            Surface = Desk.Width * Desk.Depth;
         }
 
         /*******************************
-         * Defalut Constructor
-         * ***************************/
-        public DeskQuote() {}
+       * Defalut Constructor
+       * ***************************/
+        public DeskQuote() { }
 
-        /***************************************
-         * Accessor methods 
-         * ************************************/
-        public string geDate()
-        {
-            DateTime d = DateTime.Now;
-
-            var date = d.ToShortDateString();
-
-            return date;
-        }
 
         /************************************
-         * Display the desk surface area
-         * **********************************/
-        public double SurfaceArea()
+       * Display the desk surface area
+       * **********************************/
+        public decimal CalQuoteTotal()
         {
-            if (desk.Width * desk.Depth > BASE_SIZE)
+            return BASE_PRICE + SurfaceArea() + DrawerCost() + (int)Desk.surfMaterials + RushOrderCost();
+        }
+
+        private decimal SurfaceArea()
+        {
+            decimal extraSurfaceCost = 0;
+            if (Surface > BASE_SIZE)
             {
-                return (desk.Width * desk.Depth - BASE_SIZE) * SURFACE_PER_INCH;
-            } 
-            else
-            {
-                return 0;
+                extraSurfaceCost = (Surface - BASE_SIZE) * PRICE_PER_INCH;
+
             }
+            return extraSurfaceCost;
         }
 
-        /*************************************
-        * Price list for desk materials
-        * ***********************************/
-        public double MaterialCost()
+        private decimal DrawerCost()
         {
-            string material = desk.DeskMaterials;
-
-            switch (material)
-            {
-                case "Laminate":
-                    matPrice = (int)DeskSurface.Laminate;
-                    break;
-                case "Oak":
-                    matPrice = (int)DeskSurface.Oak;
-                    break;
-                case "Pine":
-                    matPrice = (int)DeskSurface.Pine;
-                    break;
-                case "Rosewood":
-                    matPrice = (int)DeskSurface.Rosewood;
-                    break;
-                case "Veneer":
-                    matPrice = (int)DeskSurface.Veneer;
-                    break;
-                default: 
-                    matPrice = 0;
-                    break;
-            }
-
-            return matPrice;
-
-        }
-
-        /************************************
-        * Get Prices 
-        ***********************************/
-        public double QuoteTotal()
-        {
-            return BASE_PRICE + SurfaceArea() + DrawerCost() + MaterialCost() + RushOrderCost(); 
-        }
-
-        public double DrawerCost()
-        {
-            return (desk.NumOfDrawers * DRAWER_PRICE); 
+            return Desk.NumOfDrawers * DRAWER_PRICE;
         }
 
         /************************************
         * Get Rush Days cost. 
         ***********************************/
-        public void RushOrderCost(string rushDays)
+        public int RushOrderCost()
         {
+            int rushDays = 0;
             if (Surface < BASE_SIZE)
             {
-                if (RushDays == RUSH_DAY1)
+                if (RushDays == RUSH_DAYS1)
                 {
                     rushDays = 60;
                 }
-                else if (RushDays == RUSH_DAY2)
+                else if (RushDays == RUSH_DAYS2)
                 {
                     rushDays = 40;
-                } 
-                else if (RushDays == RUSH_DAY3)
+                }
+                else if (RushDays == RUSH_DAYS3)
                 {
                     rushDays = 30;
                 }
@@ -146,18 +102,18 @@ namespace MegaDesk_4_Makram_Ibrahim
                 {
                     rushDays = 0;
                 }
-            } 
+            }
             else if (Surface > BASE_SIZE || Surface < 2000)
             {
-                if (RushDays == RUSH_DAY1)
+                if (RushDays == RUSH_DAYS1)
                 {
                     rushDays = 70;
                 }
-                else if (RushDays == RUSH_DAY2)
+                else if (RushDays == RUSH_DAYS2)
                 {
                     rushDays = 50;
                 }
-                else if (RushDays == RUSH_DAY3)
+                else if (RushDays == RUSH_DAYS3)
                 {
                     rushDays = 35;
                 }
@@ -169,15 +125,15 @@ namespace MegaDesk_4_Makram_Ibrahim
 
             else
             {
-                if (RushDays == RUSH_DAY1)
+                if (RushDays == RUSH_DAYS1)
                 {
                     rushDays = 80;
                 }
-                else if (RushDays == RUSH_DAY2)
+                else if (RushDays == RUSH_DAYS2)
                 {
                     rushDays = 60;
                 }
-                else if (RushDays == RUSH_DAY3)
+                else if (RushDays == RUSH_DAYS3)
                 {
                     rushDays = 40;
                 }
@@ -186,8 +142,10 @@ namespace MegaDesk_4_Makram_Ibrahim
                     rushDays = 0;
                 }
             }
-            
-        }
 
+            return rushDays;
+
+        }
     }
+
 }

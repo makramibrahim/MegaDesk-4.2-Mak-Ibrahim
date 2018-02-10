@@ -1,0 +1,14 @@
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk-4-Makram-Ibrahim.csprojResolveAssemblyReference.cache
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk_4_Makram_Ibrahim.AddNewQuote.resources
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk_4_Makram_Ibrahim.MainMenu.resources
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk_1_Makram_Ibrahim.Properties.Resources.resources
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk_4_Makram_Ibrahim.SearchQuotes.resources
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk_4_Makram_Ibrahim.ViewQuotes.resources
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk-4-Makram-Ibrahim.csproj.GenerateResource.Cache
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk-4-Makram-Ibrahim.csproj.CoreCompileInputs.cache
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\bin\Debug\MegaDesk-1-Makram-Ibrahim.exe.config
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\bin\Debug\MegaDesk-1-Makram-Ibrahim.exe
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\bin\Debug\MegaDesk-1-Makram-Ibrahim.pdb
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk-1-Makram-Ibrahim.exe
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk-1-Makram-Ibrahim.pdb
+D:\Local Google Drive\CIT365\MegaDesk-4.2-Mak-Ibrahim-master\MegaDesk-1-Makram-Ibrahim\obj\Debug\MegaDesk_4_Makram_Ibrahim.DisplayQuote.resources

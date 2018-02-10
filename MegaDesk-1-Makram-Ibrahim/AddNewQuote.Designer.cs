@@ -28,204 +28,205 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.MenuBtn = new System.Windows.Forms.Button();
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddNewQuote));
+            this.cancelQuoteButton = new System.Windows.Forms.Button();
+            this.customerNameLabel = new System.Windows.Forms.Label();
+            this.clientName = new System.Windows.Forms.TextBox();
+            this.widthLabel = new System.Windows.Forms.Label();
+            this.depthLabel = new System.Windows.Forms.Label();
+            this.numOfDrawersLabel = new System.Windows.Forms.Label();
+            this.width = new System.Windows.Forms.TextBox();
+            this.widthErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.ErrorProvider = new System.Windows.Forms.ErrorProvider(this.components);
+            this.depth = new System.Windows.Forms.TextBox();
+            this.materialLabel = new System.Windows.Forms.Label();
+            this.materialsOutput = new System.Windows.Forms.ComboBox();
+            this.widthError = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
+            this.rushOptions = new System.Windows.Forms.ComboBox();
             this.label2 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.ClientName = new System.Windows.Forms.TextBox();
-            this.DeskWidth = new System.Windows.Forms.TextBox();
-            this.DeskDepth = new System.Windows.Forms.TextBox();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label7 = new System.Windows.Forms.Label();
-            this.TotalPrice = new System.Windows.Forms.Label();
-            this.DeskMaterial = new System.Windows.Forms.ComboBox();
-            this.Total = new System.Windows.Forms.Label();
-            this.OrderDate = new System.Windows.Forms.Label();
-            this.ConfirmBtn = new System.Windows.Forms.Button();
-            this.DeskDrawers = new System.Windows.Forms.ComboBox();
-            this.RushDays = new System.Windows.Forms.ComboBox();
-            this.DisplayQuote = new System.Windows.Forms.Label();
+            this.numOfDrawers = new System.Windows.Forms.ComboBox();
+            this.AddDeskQuoteButton = new System.Windows.Forms.Button();
+            this.pictureBox2 = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.widthErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).BeginInit();
             this.SuspendLayout();
             // 
-            // MenuBtn
+            // cancelQuoteButton
             // 
-            this.MenuBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.MenuBtn.Location = new System.Drawing.Point(11, 388);
-            this.MenuBtn.Name = "MenuBtn";
-            this.MenuBtn.Size = new System.Drawing.Size(90, 34);
-            this.MenuBtn.TabIndex = 8;
-            this.MenuBtn.Text = "Menu";
-            this.MenuBtn.UseVisualStyleBackColor = true;
-            this.MenuBtn.Click += new System.EventHandler(this.MenuBtn_Click);
+            this.cancelQuoteButton.AutoSize = true;
+            this.cancelQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.cancelQuoteButton.Location = new System.Drawing.Point(12, 367);
+            this.cancelQuoteButton.Name = "cancelQuoteButton";
+            this.cancelQuoteButton.Size = new System.Drawing.Size(200, 50);
+            this.cancelQuoteButton.TabIndex = 8;
+            this.cancelQuoteButton.Text = "Cancel";
+            this.cancelQuoteButton.UseVisualStyleBackColor = true;
+            this.cancelQuoteButton.MouseClick += new System.Windows.Forms.MouseEventHandler(this.CancelBtn_Click);
+            // 
+            // customerNameLabel
+            // 
+            this.customerNameLabel.AutoSize = true;
+            this.customerNameLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.customerNameLabel.Location = new System.Drawing.Point(12, 211);
+            this.customerNameLabel.Name = "customerNameLabel";
+            this.customerNameLabel.Size = new System.Drawing.Size(152, 24);
+            this.customerNameLabel.TabIndex = 1;
+            this.customerNameLabel.Text = "Customer Name:";
+            // 
+            // customerName
+            // 
+            this.clientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.clientName.Location = new System.Drawing.Point(170, 211);
+            this.clientName.Name = "customerName";
+            this.clientName.Size = new System.Drawing.Size(187, 29);
+            this.clientName.TabIndex = 1;
+            // 
+            // widthLabel
+            // 
+            this.widthLabel.AutoSize = true;
+            this.widthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.widthLabel.Location = new System.Drawing.Point(13, 249);
+            this.widthLabel.Name = "widthLabel";
+            this.widthLabel.Size = new System.Drawing.Size(110, 24);
+            this.widthLabel.TabIndex = 3;
+            this.widthLabel.Text = "Desk Width:";
+            // 
+            // depthLabel
+            // 
+            this.depthLabel.AutoSize = true;
+            this.depthLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depthLabel.Location = new System.Drawing.Point(13, 287);
+            this.depthLabel.Name = "depthLabel";
+            this.depthLabel.Size = new System.Drawing.Size(112, 24);
+            this.depthLabel.TabIndex = 5;
+            this.depthLabel.Text = "Desk Depth:";
+            // 
+            // numOfDrawersLabel
+            // 
+            this.numOfDrawersLabel.AutoSize = true;
+            this.numOfDrawersLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOfDrawersLabel.Location = new System.Drawing.Point(401, 300);
+            this.numOfDrawersLabel.Name = "numOfDrawersLabel";
+            this.numOfDrawersLabel.Size = new System.Drawing.Size(84, 24);
+            this.numOfDrawersLabel.TabIndex = 7;
+            this.numOfDrawersLabel.Text = "Drawers:";
+            // 
+            // width
+            // 
+            this.width.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.width.Location = new System.Drawing.Point(170, 249);
+            this.width.Name = "width";
+            this.width.Size = new System.Drawing.Size(73, 29);
+            this.width.TabIndex = 2;
+            this.width.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CharValidation);
+            this.width.Validating += new System.ComponentModel.CancelEventHandler(this.Width_Validating);
+            this.width.Validated += new System.EventHandler(this.Width_Validated);
+            // 
+            // widthErrorProvider
+            // 
+            this.widthErrorProvider.ContainerControl = this;
+            // 
+            // ErrorProvider
+            // 
+            this.ErrorProvider.ContainerControl = this;
+            // 
+            // depth
+            // 
+            this.depth.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.depth.Location = new System.Drawing.Point(170, 289);
+            this.depth.Name = "depth";
+            this.depth.Size = new System.Drawing.Size(73, 29);
+            this.depth.TabIndex = 3;
+            this.depth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.CharValidation);
+            this.depth.Validating += new System.ComponentModel.CancelEventHandler(this.Depth_Validating);
+            this.depth.Validated += new System.EventHandler(this.Depth_Validated);
+            // 
+            // materialLabel
+            // 
+            this.materialLabel.AutoSize = true;
+            this.materialLabel.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialLabel.Location = new System.Drawing.Point(400, 218);
+            this.materialLabel.Name = "materialLabel";
+            this.materialLabel.Size = new System.Drawing.Size(127, 24);
+            this.materialLabel.TabIndex = 11;
+            this.materialLabel.Text = "Desk Material:";
+            // 
+            // materialTypeBox
+            // 
+            this.materialsOutput.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.materialsOutput.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.materialsOutput.FormattingEnabled = true;
+            this.materialsOutput.Location = new System.Drawing.Point(529, 214);
+            this.materialsOutput.MaxDropDownItems = 5;
+            this.materialsOutput.Name = "materialTypeBox";
+            this.materialsOutput.Size = new System.Drawing.Size(140, 32);
+            this.materialsOutput.TabIndex = 4;
+            // 
+            // widthError
+            // 
+            this.widthError.AutoSize = true;
+            this.widthError.Location = new System.Drawing.Point(220, 251);
+            this.widthError.Name = "widthError";
+            this.widthError.Size = new System.Drawing.Size(0, 13);
+            this.widthError.TabIndex = 13;
             // 
             // label1
             // 
+            this.label1.AutoSize = true;
             this.label1.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label1.Location = new System.Drawing.Point(26, 64);
+            this.label1.Location = new System.Drawing.Point(401, 261);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(127, 50);
-            this.label1.TabIndex = 1;
-            this.label1.Text = "Client Name:";
-            this.label1.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label1.Size = new System.Drawing.Size(105, 24);
+            this.label1.TabIndex = 14;
+            this.label1.Text = "Rush Days:";
+            // 
+            // rushOptions
+            // 
+            this.rushOptions.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.rushOptions.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.rushOptions.FormattingEnabled = true;
+            this.rushOptions.Items.AddRange(new object[] {
+            "None",
+            "3 Days",
+            "5 Days",
+            "7 Days"});
+            this.rushOptions.Location = new System.Drawing.Point(529, 254);
+            this.rushOptions.MaxDropDownItems = 5;
+            this.rushOptions.Name = "rushOptions";
+            this.rushOptions.Size = new System.Drawing.Size(140, 32);
+            this.rushOptions.TabIndex = 5;
             // 
             // label2
             // 
-            this.label2.BackColor = System.Drawing.SystemColors.Control;
-            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label2.Location = new System.Drawing.Point(26, 114);
+            this.label2.AutoSize = true;
+            this.label2.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label2.Location = new System.Drawing.Point(249, 255);
             this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(127, 50);
-            this.label2.TabIndex = 1;
-            this.label2.Text = "Desk Width:";
-            this.label2.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label2.Size = new System.Drawing.Size(66, 16);
+            this.label2.TabIndex = 16;
+            this.label2.Text = "24in - 96in";
             // 
             // label3
             // 
-            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label3.Location = new System.Drawing.Point(26, 164);
+            this.label3.AutoSize = true;
+            this.label3.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.label3.Location = new System.Drawing.Point(249, 298);
             this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(127, 50);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Desk Depth:";
-            this.label3.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
+            this.label3.Size = new System.Drawing.Size(66, 16);
+            this.label3.TabIndex = 17;
+            this.label3.Text = "12in - 48in";
             // 
-            // label4
+            // numOfDrawers
             // 
-            this.label4.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label4.Location = new System.Drawing.Point(12, 9);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(68, 50);
-            this.label4.TabIndex = 1;
-            this.label4.Text = "Date:";
-            this.label4.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ClientName
-            // 
-            this.ClientName.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ClientName.Location = new System.Drawing.Point(159, 77);
-            this.ClientName.Name = "ClientName";
-            this.ClientName.Size = new System.Drawing.Size(183, 26);
-            this.ClientName.TabIndex = 1;
-            // 
-            // DeskWidth
-            // 
-            this.DeskWidth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeskWidth.Location = new System.Drawing.Point(159, 124);
-            this.DeskWidth.Name = "DeskWidth";
-            this.DeskWidth.Size = new System.Drawing.Size(183, 26);
-            this.DeskWidth.TabIndex = 2;
-            this.DeskWidth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DeskWidth_KeyPress);
-            // 
-            // DeskDepth
-            // 
-            this.DeskDepth.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeskDepth.Location = new System.Drawing.Point(159, 174);
-            this.DeskDepth.Name = "DeskDepth";
-            this.DeskDepth.Size = new System.Drawing.Size(183, 26);
-            this.DeskDepth.TabIndex = 3;
-            this.DeskDepth.TextChanged += new System.EventHandler(this.DeskDepth_TextChanged);
-            this.DeskDepth.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.DeskWidth_KeyPress);
-            // 
-            // label5
-            // 
-            this.label5.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label5.Location = new System.Drawing.Point(374, 64);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(109, 50);
-            this.label5.TabIndex = 1;
-            this.label5.Text = "Material:";
-            this.label5.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label6
-            // 
-            this.label6.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label6.Location = new System.Drawing.Point(374, 114);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(109, 50);
-            this.label6.TabIndex = 1;
-            this.label6.Text = "Drawers :";
-            this.label6.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // label7
-            // 
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.label7.Location = new System.Drawing.Point(374, 164);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(109, 50);
-            this.label7.TabIndex = 1;
-            this.label7.Text = "Rush Days:";
-            this.label7.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // TotalPrice
-            // 
-            this.TotalPrice.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.TotalPrice.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.TotalPrice.Location = new System.Drawing.Point(504, 388);
-            this.TotalPrice.Name = "TotalPrice";
-            this.TotalPrice.Size = new System.Drawing.Size(138, 35);
-            this.TotalPrice.TabIndex = 1;
-            this.TotalPrice.Text = "$0.00";
-            this.TotalPrice.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // DeskMaterial
-            // 
-            this.DeskMaterial.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
-            this.DeskMaterial.AllowDrop = true;
-            this.DeskMaterial.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DeskMaterial.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeskMaterial.FormattingEnabled = true;
-            this.DeskMaterial.Items.AddRange(new object[] {
-            "Oak",
-            "Laminate",
-            "Pine",
-            "Rosewood",
-            "Veneer"});
-            this.DeskMaterial.Location = new System.Drawing.Point(489, 82);
-            this.DeskMaterial.Name = "DeskMaterial";
-            this.DeskMaterial.Size = new System.Drawing.Size(121, 28);
-            this.DeskMaterial.TabIndex = 4;
-            this.DeskMaterial.SelectedIndexChanged += new System.EventHandler(this.Material_SelectedIndexChanged);
-            // 
-            // Total
-            // 
-            this.Total.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.Total.Location = new System.Drawing.Point(438, 388);
-            this.Total.Name = "Total";
-            this.Total.Size = new System.Drawing.Size(60, 38);
-            this.Total.TabIndex = 1;
-            this.Total.Text = "Total:";
-            this.Total.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // OrderDate
-            // 
-            this.OrderDate.BorderStyle = System.Windows.Forms.BorderStyle.Fixed3D;
-            this.OrderDate.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.OrderDate.Location = new System.Drawing.Point(69, 19);
-            this.OrderDate.Name = "OrderDate";
-            this.OrderDate.Size = new System.Drawing.Size(182, 30);
-            this.OrderDate.TabIndex = 1;
-            this.OrderDate.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            // 
-            // ConfirmBtn
-            // 
-            this.ConfirmBtn.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.ConfirmBtn.Location = new System.Drawing.Point(107, 388);
-            this.ConfirmBtn.Name = "ConfirmBtn";
-            this.ConfirmBtn.Size = new System.Drawing.Size(134, 34);
-            this.ConfirmBtn.TabIndex = 7;
-            this.ConfirmBtn.Text = "Add Quote";
-            this.ConfirmBtn.UseVisualStyleBackColor = true;
-            this.ConfirmBtn.Click += new System.EventHandler(this.ConfirmBtn_Click);
-            // 
-            // DeskDrawers
-            // 
-            this.DeskDrawers.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
-            this.DeskDrawers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.DeskDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DeskDrawers.FormattingEnabled = true;
-            this.DeskDrawers.Items.AddRange(new object[] {
+            this.numOfDrawers.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.numOfDrawers.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.numOfDrawers.FormattingEnabled = true;
+            this.numOfDrawers.Items.AddRange(new object[] {
+            "0",
             "1",
             "2",
             "3",
@@ -233,64 +234,68 @@
             "5",
             "6",
             "7"});
-            this.DeskDrawers.Location = new System.Drawing.Point(489, 124);
-            this.DeskDrawers.Name = "DeskDrawers";
-            this.DeskDrawers.Size = new System.Drawing.Size(121, 28);
-            this.DeskDrawers.TabIndex = 5;
-            this.DeskDrawers.SelectedIndexChanged += new System.EventHandler(this.Material_SelectedIndexChanged);
+            this.numOfDrawers.Location = new System.Drawing.Point(529, 292);
+            this.numOfDrawers.Name = "numOfDrawers";
+            this.numOfDrawers.Size = new System.Drawing.Size(73, 32);
+            this.numOfDrawers.TabIndex = 6;
             // 
-            // RushDays
+            // AddDeskQuoteButton
             // 
-            this.RushDays.AccessibleRole = System.Windows.Forms.AccessibleRole.PageTabList;
-            this.RushDays.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
-            this.RushDays.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.RushDays.FormattingEnabled = true;
-            this.RushDays.Items.AddRange(new object[] {
-            "3",
-            "5",
-            "7"});
-            this.RushDays.Location = new System.Drawing.Point(489, 171);
-            this.RushDays.Name = "RushDays";
-            this.RushDays.Size = new System.Drawing.Size(121, 28);
-            this.RushDays.TabIndex = 6;
-            this.RushDays.SelectedIndexChanged += new System.EventHandler(this.Material_SelectedIndexChanged);
+            this.AddDeskQuoteButton.AutoSize = true;
+            this.AddDeskQuoteButton.Font = new System.Drawing.Font("Microsoft Sans Serif", 14.25F, System.Drawing.FontStyle.Italic, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.AddDeskQuoteButton.Location = new System.Drawing.Point(218, 367);
+            this.AddDeskQuoteButton.Name = "AddDeskQuoteButton";
+            this.AddDeskQuoteButton.Size = new System.Drawing.Size(200, 50);
+            this.AddDeskQuoteButton.TabIndex = 7;
+            this.AddDeskQuoteButton.Text = "Submit Quote";
+            this.AddDeskQuoteButton.UseVisualStyleBackColor = true;
+            this.AddDeskQuoteButton.Click += new System.EventHandler(this.DeskQuoteBtn_Click);
             // 
-            // DisplayQuote
+            // pictureBox2
             // 
-            this.DisplayQuote.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.DisplayQuote.Location = new System.Drawing.Point(27, 222);
-            this.DisplayQuote.Name = "DisplayQuote";
-            this.DisplayQuote.Size = new System.Drawing.Size(456, 163);
-            this.DisplayQuote.TabIndex = 6;
+            this.pictureBox2.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox2.Image")));
+            this.pictureBox2.Location = new System.Drawing.Point(12, 12);
+            this.pictureBox2.MinimumSize = new System.Drawing.Size(660, 176);
+            this.pictureBox2.Name = "pictureBox2";
+            this.pictureBox2.Size = new System.Drawing.Size(660, 176);
+            this.pictureBox2.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.pictureBox2.TabIndex = 19;
+            this.pictureBox2.TabStop = false;
             // 
             // AddNewQuote
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.BackColor = System.Drawing.SystemColors.Control;
-            this.ClientSize = new System.Drawing.Size(654, 450);
-            this.Controls.Add(this.DisplayQuote);
-            this.Controls.Add(this.ConfirmBtn);
-            this.Controls.Add(this.RushDays);
-            this.Controls.Add(this.DeskDrawers);
-            this.Controls.Add(this.DeskMaterial);
-            this.Controls.Add(this.DeskDepth);
-            this.Controls.Add(this.DeskWidth);
-            this.Controls.Add(this.ClientName);
-            this.Controls.Add(this.Total);
-            this.Controls.Add(this.TotalPrice);
-            this.Controls.Add(this.OrderDate);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label7);
+            this.ClientSize = new System.Drawing.Size(680, 433);
+            this.ControlBox = false;
+            this.Controls.Add(this.pictureBox2);
+            this.Controls.Add(this.AddDeskQuoteButton);
+            this.Controls.Add(this.numOfDrawers);
             this.Controls.Add(this.label3);
-            this.Controls.Add(this.label6);
             this.Controls.Add(this.label2);
-            this.Controls.Add(this.label5);
+            this.Controls.Add(this.rushOptions);
             this.Controls.Add(this.label1);
-            this.Controls.Add(this.MenuBtn);
-            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
+            this.Controls.Add(this.widthError);
+            this.Controls.Add(this.materialsOutput);
+            this.Controls.Add(this.materialLabel);
+            this.Controls.Add(this.depth);
+            this.Controls.Add(this.width);
+            this.Controls.Add(this.numOfDrawersLabel);
+            this.Controls.Add(this.depthLabel);
+            this.Controls.Add(this.widthLabel);
+            this.Controls.Add(this.clientName);
+            this.Controls.Add(this.customerNameLabel);
+            this.Controls.Add(this.cancelQuoteButton);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedToolWindow;
+            this.MaximizeBox = false;
+            this.MinimizeBox = false;
             this.Name = "AddNewQuote";
-            this.Text = "AddNewQuote";
+            this.SizeGripStyle = System.Windows.Forms.SizeGripStyle.Hide;
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
+            this.Text = "AddQuote";
+            ((System.ComponentModel.ISupportInitialize)(this.widthErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.ErrorProvider)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.pictureBox2)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -298,24 +303,25 @@
 
         #endregion
 
-        private System.Windows.Forms.Button MenuBtn;
+        private System.Windows.Forms.Button cancelQuoteButton;
+        private System.Windows.Forms.Label customerNameLabel;
+        private System.Windows.Forms.TextBox clientName;
+        private System.Windows.Forms.Label widthLabel;
+        private System.Windows.Forms.Label depthLabel;
+        private System.Windows.Forms.Label numOfDrawersLabel;
+        private System.Windows.Forms.TextBox width;
+        private System.Windows.Forms.ErrorProvider widthErrorProvider;
+        private System.Windows.Forms.Label materialLabel;
+        private System.Windows.Forms.TextBox depth;
+        private System.Windows.Forms.ErrorProvider ErrorProvider;
+        private System.Windows.Forms.ComboBox materialsOutput;
+        private System.Windows.Forms.Label widthError;
+        private System.Windows.Forms.ComboBox rushOptions;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
-        private System.Windows.Forms.TextBox ClientName;
-        private System.Windows.Forms.TextBox DeskWidth;
-        private System.Windows.Forms.TextBox DeskDepth;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label6;
-        private System.Windows.Forms.Label label7;
-        private System.Windows.Forms.Label TotalPrice;
-        private System.Windows.Forms.ComboBox DeskMaterial;
-        private System.Windows.Forms.Label Total;
-        private System.Windows.Forms.Label OrderDate;
-        private System.Windows.Forms.Button ConfirmBtn;
-        private System.Windows.Forms.ComboBox DeskDrawers;
-        private System.Windows.Forms.ComboBox RushDays;
-        private System.Windows.Forms.Label DisplayQuote;
+        private System.Windows.Forms.Label label2;
+        private System.Windows.Forms.ComboBox numOfDrawers;
+        private System.Windows.Forms.Button AddDeskQuoteButton;
+        private System.Windows.Forms.PictureBox pictureBox2;
     }
 }

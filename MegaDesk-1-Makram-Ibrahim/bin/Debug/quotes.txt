@@ -1,0 +1,16 @@
+Makram Ibrahim, 06 February 2018, 26, 27, 3, Veneer, 3, 535
+Ginia Ibrahim, 06 February 2018, 26, 45, 4, Oak, 5, 820
+Elon Ibrahim, 06 February 2018, 26, 19, 4, Laminate, 5, 540
+Mak Ibrahim, 06 February 2018, 29, 46, 7, Rosewood, 7, 1219
+Hema Yacoub, Date: 06 February 2018, Width: 29, Depth: 36, Drawers: 4, Materials: Laminate, Rush Order: 3, $614
+Kemo Johan, Date: 06 February 2018, Width: 29, Depth: 45, Drawers: 2, Materials: Pine, Rush Order: 5, $705
+imak, Date: 06 February 2018, Width: 26, Depth: 21, Drawers: 3, Materials: Oak, Rush: 3, $610
+Ibrahim Ayad, Date: 06 February 2018, Width: 26, Depth: 25, Drawers: 3, Materials: Veneer, Rush: 3, $535
+Virginia Ibrahim, Date: 06 February 2018, Width: 28, Depth: 35, Drawers: 3, Materials: Laminate, Rush: 5, $490
+Bola Ayad, Date: 06 February 2018, Width: 26, Depth: 39, Drawers: 2, Materials: Veneer, Rush: 3, $509
+makram ibrahim, Date: 06 February 2018, Width: 26, Depth: 36, Drawers: 4, Materials: Veneer, Rush: 5, $565
+Elon Makram , Date: 06 February 2018, Width: 26, Depth: 42, Drawers: 7, Materials: Pine, Rush: 7, $727
+Remon Samy, Date: 06 February 2018, Width: 34, Depth: 28, Drawers: 2, Materials: Rosewood, Rush: 7, $630
+Makram Ayad , Date: 06 February 2018, Width: 26, Depth: 45, Drawers: 0, Materials: Veneer, Rush: 7, $530
+Hany Ghaly, Date: 06 February 2018, Width: 36, Depth: 45, Drawers: 0, Materials: Pine, Rush: 7, $905
+Again Name , Date: 06 February 2018, Width: 96, Depth: 45, Drawers: 3, Materials: Laminate, Rush: 5, $3820

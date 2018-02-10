@@ -8,23 +8,27 @@ namespace MegaDesk_4_Makram_Ibrahim
 {
     class Desk
     {
-        public double Width           { get; set; }
-        public double Depth           { get; set; }
-        public int NumOfDrawers       { get; set; }
-        public string DeskMaterials   { get; set; }
+        public decimal Width                  { get; set; }
+        public decimal Depth                  { get; set; }
+        public int NumOfDrawers               { get; set; }
+        public SurfaceMaterials surfMaterials { get; set; }
+
+        public const decimal MIN_WIDTH = 24;
+        public const decimal MAX_WIDTH = 96;
+        public const decimal MIN_DEPTH = 12;
+        public const decimal MAX_DEPTH = 48;
     }
 
-
-     /***********************
+    /***********************
      * Set our own data type 
-     ************************/
-   public enum DeskSurface
+     **********************/
+    public enum SurfaceMaterials
     {
-        Oak = 200,
         Laminate = 100,
-        Pine = 50,
+        Oak = 200,
         Rosewood = 300,
-        Veneer = 125
-    }
-
+        Veneer = 125,
+        Pine = 50
+    };
 }
+

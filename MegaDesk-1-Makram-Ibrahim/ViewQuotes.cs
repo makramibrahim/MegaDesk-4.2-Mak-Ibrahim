@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
 using System.Drawing;
+using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -16,16 +17,30 @@ namespace MegaDesk_4_Makram_Ibrahim
         {
             InitializeComponent();
 
+            string line;
+            try
+            {
+                string QuoteFile = @"C:\Users\Makram\Desktop\quotes.txt";
+                using (StreamReader sr = new StreamReader(QuoteFile))
+                {
+                    
+                    while ((line = sr.ReadLine()) != null)
+                    {
+                        ViewQuotesBox.Items.Add(line);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message + "Error, can't read the file");
+            }
         }
 
-        private void MenuBtn_Click(object sender, EventArgs e)
+        private void CancelViewQuotesBtn_Click(object sender, MouseEventArgs e)
         {
             var mainMenu = (MainMenu)Tag;
-
             mainMenu.Show();
-
             Close();
-
         }
     }
 }
